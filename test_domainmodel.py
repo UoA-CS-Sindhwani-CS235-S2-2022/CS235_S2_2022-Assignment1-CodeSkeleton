@@ -20,7 +20,7 @@ class TestArtist:
         artist6 = Artist(-1, 'Tailor Swift')# Test when the artist id type is invalid
         assert str(artist6) == 'This is invalid artist id'
 
-class TestGener:
+class TestGenre:
 
     def test_construction(self):
         genre1 = Genre(1, 'Jazz ')
