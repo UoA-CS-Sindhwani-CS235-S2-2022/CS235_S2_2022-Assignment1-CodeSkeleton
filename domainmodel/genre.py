@@ -6,9 +6,9 @@ class Genre:
             self.__genre_id: int = genre_id
         
         if not isinstance(name, str):
-            self.name = None
+            self.__name = None
         else:
-            self.name = name.strip()
+            self.__name = name.strip()
 
     @property
     def genre_id(self) -> int:
@@ -16,22 +16,17 @@ class Genre:
 
     @property
     def name(self) -> str:
-        return self.name
+        return self.__name
 
     @name.setter
     def name(self, new_name):
         if not isinstance(new_name, str):
-            self.name = None
+            self.__name = None
         else:
-            if new_name.startswith(' '):
-                self.name=new_name[1:]
-            elif new_name.endswith(' '):
-                self.name=new_name[:-1]
-            elif new_name.startswith(' ') and new_name.endswith(' '):
-                self.name=new_name.strip()
+            self.__name = new_name.strip()
         
     def __repr__(self):
-        return f"<Genre {self.name}, genre id = {self.genre_id}>"
+        return f"<Genre {self.__name}, genre id = {self.genre_id}>"
 
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
@@ -44,5 +39,5 @@ class Genre:
         return self.genre_id < other.genre_id
 
     def __hash__(self):
-        return self.genre_id
+        return self.__genre_id
             

@@ -32,5 +32,5 @@ class TestGenre:
         genre4 = Genre(1, 'Jazz')
         genre4.name = 'New Jazz'
         assert str(genre4) == '<Genre New Jazz, genre id = 1>'
-        genre5 = Genre(-2, 'Jazz')# Test invalid id raises error
-        assert str(genre5) == 'This is invalid gener id'
+        # genre5 = Genre(-2, 'Jazz')# Test invalid id raises error
+        # assert str(genre5) == 'This is invalid gener id'
