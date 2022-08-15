@@ -1,5 +1,5 @@
 class Genre:
-    def __init__(self,genre_id: int, name: str):
+    def __init__(self, genre_id: int, name: str):
         if not isinstance(genre_id, int) or genre_id <= 0:
             raise ValueError("This is invalid genre id")
         else:
